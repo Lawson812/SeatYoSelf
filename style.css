@@ -1,20 +1,21 @@
 
 
 /*header font*/
-.header {
+h1 {
   font-family: 'Julius Sans One', sans-serif;
   border: double;
 }
 
 body {
-  background-color: orange;
+  background-color: teal;
 }
 
 .screen{
     width:80vw;
-    height:30vh;
+    height:10vh;
     background-color:#e6e8e6;
     margin-left:8%;
+    text-align: center;
 
 }
 
