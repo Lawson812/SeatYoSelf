@@ -1,0 +1,9 @@
+/*header font*/
+h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  border: double;
+}
+
+body {
+  background-color: peachpuff;
+}
