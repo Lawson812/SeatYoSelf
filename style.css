@@ -1,5 +1,5 @@
 .rowA{
-    background-color:red;
+    background-color:#ed6334;
     width:175px;
     height:175px;
     text-align:center;
@@ -21,4 +21,14 @@
 
 .blueBar {
     margin-bottom: 5%;
+    background-color:#473f3c;
+    width:1000px;
+    height:200px;
+    margin-left:15%;
+    text-align:center;
+    font-size:50px;
+    
+}
+.blueBar p{
+    color:ghostwhite;
 }
