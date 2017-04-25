@@ -1,0 +1,24 @@
+.rowA{
+    background-color:red;
+    width:175px;
+    height:175px;
+    text-align:center;
+    display:inline-block;
+}
+.row1{
+    margin-left:10%;
+    margin-bottom:2%;
+}
+.row1 div {
+    display: inline-block;
+}
+.row2 div{
+    display: inline-block
+}
+.theater div{
+    display:inline-block;
+}
+
+.blueBar {
+    margin-bottom: 5%;
+}
