@@ -15,7 +15,7 @@ $('.seat').on('mouseleave',function(){
                       movie:""};
 //Make the seats click and bring down the form modal
     $('.seat').click(function(){
-    
+
      $('#formModal').css('display','block');
      $('#infoForm').slideDown(500);
        $('.close').on('click',function(){
@@ -24,17 +24,17 @@ $('.seat').on('mouseleave',function(){
         $('.reserveButton').on('click',function(){
             $('#formModal').css('display','none');
         });
-            
-        
-       
-       
-     
-    });
+});
 
-   
-    
-    
-    
+$('.reserveButton').on('click', function (){
+  var name = $('#name').val();
+  var number = $('#number').val();
+  var age = $('#age').val();
+  var email = $('#email').val();
+  var movie = $('#movie').val();
+  console.log(name + ' '+ number + ' ' +age +' '+ email +' '+ movie);
+})
+
 //back to top button
     var infoArray=[];
     $('.backToTop').click(function(){
@@ -44,5 +44,5 @@ $('.seat').on('mouseleave',function(){
     });
 
 //$('#info').val().push('infoArray');
-    
+
 });
