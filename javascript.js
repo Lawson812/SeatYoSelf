@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+// slideDown
+    $("#clickhere").click(function(event) {
+    $("#shows").slideToggle('slow');
+  });
+
     var seat = $('.seat');
 
 $('.seat').on('mouseover',function(){
@@ -24,6 +29,7 @@ $('.seat').on('mouseleave',function(){
         $('.reserveButton').on('click',function(){
             $('#formModal').css('display','none');
         });
+<<<<<<< HEAD
 });
 
 $('.reserveButton').on('click', function (){
@@ -35,6 +41,19 @@ $('.reserveButton').on('click', function (){
   console.log(name + ' '+ number + ' ' +age +' '+ email +' '+ movie);
 })
 
+=======
+
+
+
+
+
+    });
+
+
+
+
+
+>>>>>>> 8f4624ab6c1716fab954a909eae68dfe9cd95384
 //back to top button
     var infoArray=[];
     $('.backToTop').click(function(){
@@ -42,6 +61,7 @@ $('.reserveButton').on('click', function (){
     scrollTop: ($('.header').offset().top)
 },500);
     });
+
 
 //$('#info').val().push('infoArray');
 

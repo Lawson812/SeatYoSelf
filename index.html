@@ -12,7 +12,15 @@
 
   <body>
  <h1 class='header'><img src="images/grandcircuslogo.jpg" alt="Grand Circus Logo" /><br></h1>
-      <h1>Welcome to Grand Circus Theatre</h1>
+
+      <center><h1>Welcome to Grand Circus Theatre</h1></center>
+<!-- show listing div -->
+<div class='showlist'>
+
+<center><button id="clickhere">Show Listing</button></center>
+
+<center><p id="shows" hidden>Movie 1</br>Movie 2</br>Movie 3</br>Movie 4</br>Movie 5</p></br></center>
+</div>
 
 <p style="text-align:center;">Hover over a seat and see if it's available. then reserve your showing at <strong>Grand Circus Theatre</strong>. <br>  Refreshments like pancakes or hummus are available, as well as a full bar and daycare</p>
 
@@ -20,12 +28,11 @@
       <div id="infoForm">
 <form id="info">
         <span class="close"> &times;</span>
-
-  <label><input type="text" id="name" placeholder="Name"></label><br>
-  <label><input type="number" id="number" placeholder="Phone Number"></label><br>
-  <label><input type="number" id="age" placeholder="Age"></label><br>
-  <label><input type="email" id="email" placeholder="Email"></label><br>
-  <select id="movie" name="movieName">
+  <label>Your Name</br><input type="text" id="name"></label><br>
+  <label>Phone Number</br><input type="number" id="number"></label><br>
+  <label>Age</br><input type="number" id="age"></label><br>
+  <label>Email</br><input type="email" id="email"></label><br>
+  <select name="movieName">
     <option value="movie1">
       Movie1
     <option value="movie2">
