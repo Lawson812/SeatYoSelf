@@ -11,40 +11,45 @@
 
 
   <body>
-    <div>
-<form>
-  <label>Your Name<input type="text" /></label><br>
-  <label>Phone Number<input type="text" /></label><br>
-  <label>Age<input type="text" /></label><br>
-  <label>Email<input type="email" /></label><br>
-  <select>
-    <option value="movie">
-      Movie
+
+      <h1 class='header'><img src="images/grandcircuslogo.jpg" alt="Grand Circus Logo"/><br></h1>
+
+      <h1>Welcome to Grand Circus Theatre</h1>
+
+<p style="text-align:center;">Hover over a seat and see if it's available. then reserve your showing at <strong>Grand Circus Theatre</strong>. <br>  Refreshments like pancakes or hummus are available, as well as a full bar and daycare</p>
+      
+<div id="formModal" class='modal'>
+      <div id="infoForm">
+<form id="info">
+        <span class="close"> &times;</span>
+
+  <label>Your Name<input type="text" id="name"></label><br>
+  <label>Phone Number<input type="number" id="number"></label><br>
+  <label>Age<input type="number" id="age"></label><br>
+  <label>Email<input type="email" id="email"></label><br>
+  <select name="movieName">
+    <option value="movie1">
+      Movie1
     </option>
-    <option value="movie">
-      Movie
+    <option value="movie2">
+      Movie2
     </option>
-    <option value="movie">
-      Movie
+    <option value="movie3">
+      Movie3
     </option>
-    <option value="movie">
-      Movie
+    <option value="movie4">
+      Movie4
     </option>
-    <option value="movie">
-      Movie
+    <option value="movie5">
+      Movie5
     </option>
   </select><br>
+    <button type="button" class='reserveButton'>Reserve</button>
 </form>
 </div>
-<p>Hover over a seat and see if it's available. then reserve your showing at <strong>Grand Circus Theatre</strong>. <br>  Refreshments like pancakes or hummus are available, as well as a full bar and daycare</p>
-      <div class='screen'></div>
-
-      <h1 class='header'><img src="images/grandcircuslogo.jpg" alt="Grand Circus Logo" /><br></h1>
-
-      <center><h1>Welcome to Grand Circus Theatre</h1></center>
-
-<center><p>Hover over a seat and see if it's available. then reserve your showing at <strong>Grand Circus Theatre</strong>. <br>  Refreshments like pancakes or hummus are available, as well as a full bar and daycare</p></center>
-      <div class='screen'>Screen</div>
+      </div>
+      
+      <div class='screen'><p>Screen</p></div>
       <div class='row'>
           <div class='seat'>1A</div>
           <div class='seat'>1B</div>
@@ -82,6 +87,8 @@
 
       </div>
 
+      
+<button type="button" class="backToTop">Back To Top</button>
 
 
 

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+//seat opacity hover function
     var seat = $('.seat');
 
 $('.seat').on('mouseover',function(){
@@ -13,6 +13,36 @@ $('.seat').on('mouseleave',function(){
                       age:"",
                       email:"",
                       movie:""};
+//Make the seats click and bring down the form modal
+    $('.seat').click(function(){
+    
+     $('#formModal').css('display','block');
+     $('#infoForm').slideDown(500);
+       $('.close').on('click',function(){
+           $('#formModal').css('display','none');
+       });
+        $('.reserveButton').on('click',function(){
+            $('#formModal').css('display','none');
+        });
+            
+        
+       
+       
+     
+    });
 
+   
+    
+    
+    
+//back to top button
+    var infoArray=[];
+    $('.backToTop').click(function(){
+        $('html, body').animate({
+    scrollTop: ($('.header').offset().top)
+},500);
+    });
+
+//$('#info').val().push('infoArray');
     
 });
