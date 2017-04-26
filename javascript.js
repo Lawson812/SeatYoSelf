@@ -1,5 +1,5 @@
 $(document).ready(function(){
-//seat opacity hover function
+
     var seat = $('.seat');
 
 $('.seat').on('mouseover',function(){
