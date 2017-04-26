@@ -22,7 +22,22 @@ $('.seat').on('mouseleave',function(){
            $('#formModal').css('display','none');
        });
         $('.reserveButton').on('click',function(){
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var age= $('#age').val();
+            var phone=$('#phone').val();
+            var movieName=$('#movieName').val();
+            var reservations={};
+            
+            reservations[0]={name:name, email:email, age:age, phone:phone,movie:movieName};
+           
+            console.log(reservations);
+            
+        
+            
+           
             $('#formModal').css('display','none');
+            
         });
             
         

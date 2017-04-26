@@ -69,6 +69,9 @@ body {
 .close{
     float:left;
     font-size:22px;
+    border:1px solid black;
+    width:2vw;
+    background-color:crimson;
 }
 .reserveButton{
     border:none;
