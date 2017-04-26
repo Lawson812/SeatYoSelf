@@ -11,7 +11,7 @@
 
 
   <body>
-      <center><h1 class='header'><img src="images/grandcircuslogo.jpg" alt="Grand Circus Logo" /></center></br></h1>
+ <h1 class='header'><img src="images/grandcircuslogo.jpg" alt="Grand Circus Logo" /><br></h1>
 
       <center><h1>Welcome to Grand Circus Theatre</h1></center>
 <!-- show listing div -->
@@ -19,11 +19,44 @@
 
 <center><button id="clickhere">Show Listing</button></center>
 
-<center><p id="shows">Movie 1</br>Movie 2</br>Movie 3</br>Movie 4</br>Movie 5</p></br></center>
+<center><p id="shows" hidden>Movie 1</br>Movie 2</br>Movie 3</br>Movie 4</br>Movie 5</p></br></center>
 </div>
 
-<center><p>Hover over a seat and see if it's available, then reserve your showing at <strong>Grand Circus Theatre</strong>. <br>  Refreshments like pancakes or hummus are available, as well as a full bar and daycare</p></center>
+<p style="text-align:center;">Hover over a seat and see if it's available. then reserve your showing at <strong>Grand Circus Theatre</strong>. <br>  Refreshments like pancakes or hummus are available, as well as a full bar and daycare</p>
+
+<div id="formModal" class='modal'>
+      <div id="infoForm">
+<form id="info">
+        <span class="close"> &times;</span>
+
+  <label>Your Name</br><input type="text" id="name"></label><br>
+  <label>Phone Number</br><input type="number" id="number"></label><br>
+  <label>Age</br><input type="number" id="age"></label><br>
+  <label>Email</br><input type="email" id="email"></label><br>
+  <select name="movieName">
+    <option value="movie1">
+      Movie1
+    <option value="movie2">
+      Movie2
+    </option>
+    <option value="movie3">
+      Movie3
+    </option>
+    <option value="movie4">
+      Movie4
+    </option>
+    <option value="movie5">
+      Movie5
+    </option>
+  </select><br>
+    <button type="button" class='reserveButton'>Reserve</button>
+</form>
+</div>
+      </div>
+
       <div class='screen'>Screen</div>
+
+
       <div class='row'>
           <div class='seat'>1A</div>
           <div class='seat'>1B</div>
@@ -62,8 +95,10 @@
       </div>
 
 
+<button type="button" class="backToTop">Back To Top</button>
 
 
-
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+      <script src="javascript.js"></script>
   </body>
 </html>
