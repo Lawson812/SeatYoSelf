@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+// slideDown
+    $("#clickhere").click(function(event) {
+    $("#shows").slideToggle('slow');
+  });
+
     var seat = $('.seat');
 
 $('.seat').on('mouseover',function(){
@@ -15,7 +20,7 @@ $('.seat').on('mouseleave',function(){
                       movie:""};
 //Make the seats click and bring down the form modal
     $('.seat').click(function(){
-    
+
      $('#formModal').css('display','block');
      $('#infoForm').slideDown(500);
        $('.close').on('click',function(){
@@ -39,17 +44,11 @@ $('.seat').on('mouseleave',function(){
             $('#formModal').css('display','none');
             
         });
-            
-        
-       
-       
-     
-    });
+});
 
-   
-    
-    
-    
+
+
+
 //back to top button
     var infoArray=[];
     $('.backToTop').click(function(){
@@ -58,6 +57,11 @@ $('.seat').on('mouseleave',function(){
 },500);
     });
 
-//$('#info').val().push('infoArray');
-    
-});
+
+
+    });
+
+
+
+
+
