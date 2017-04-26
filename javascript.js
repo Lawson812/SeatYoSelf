@@ -15,11 +15,4 @@ $('.seat').on('mouseleave',function(){
                       movie:""};
 
     
-
-
-
-
-
-
-
 });
