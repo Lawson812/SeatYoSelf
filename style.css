@@ -31,3 +31,7 @@ body {
     margin-left:12%;
     width:auto;
 }
+
+#form {
+  display: none;
+}
