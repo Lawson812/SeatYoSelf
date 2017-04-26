@@ -87,3 +87,13 @@ input {
 label{
     text-align: center;
 }
+
+.reservedSeat{
+     width:12vw;
+    height:15vh;
+    background-color:aqua;
+    margin-top:5%;
+    display:inline-block;
+    text-align:center;
+    border-radius: 10%;
+}
