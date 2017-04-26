@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 // slideDown
     $("#clickhere").click(function(event) {
-    $("#shows").hide().slideDown('slow');
+    $("#shows").slideToggle('slow');
   });
 
     var seat = $('.seat');
