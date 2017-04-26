@@ -17,7 +17,10 @@ body {
     background-color:#e6e8e6;
     margin-left:8%;
     text-align: center;
+}
 
+input {
+  width: 50%;
 }
 
 .screen p{
@@ -69,6 +72,9 @@ body {
 .close{
     float:left;
     font-size:22px;
+    border:1px solid black;
+    width:2vw;
+    background-color:crimson;
 }
 .reserveButton{
     border:none;
@@ -77,3 +83,17 @@ body {
     border-radius:5%;
     height:5vh;
     margin-top:1%;
+}
+label{
+    text-align: center;
+}
+
+.reservedSeat{
+     width:12vw;
+    height:15vh;
+    background-color:aqua;
+    margin-top:5%;
+    display:inline-block;
+    text-align:center;
+    border-radius: 10%;
+}
