@@ -4,19 +4,26 @@
 h1 {
   font-family: 'Julius Sans One', sans-serif;
   border: double;
-   text-align: center;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 body {
   background-color: teal;
 }
 
+/*screen style*/
 .screen{
     width:80vw;
     height:10vh;
-    background-color:#e6e8e6;
+    background-color:#848E8D;
     margin-left:8%;
     text-align: center;
+    border-radius: 10%
+
 }
 
 input {
@@ -27,6 +34,7 @@ input {
     bottom: 0%;
 }
 
+/*seat style*/
 .seat{
     width:12vw;
     height:15vh;
@@ -40,6 +48,8 @@ input {
     margin-left:12%;
     width:auto;
 }
+
+/*for style*/
 #infoForm{
     background-color: #fefefe;
     margin: 15% auto;
@@ -51,10 +61,6 @@ input {
     font-family:'Julius Sans One', sans-serif;
     box-shadow: 3px 3px 9px     #797777;
 
-}
-.backToTop{
-    border:none;
-    background-color:#f66828;
 }
 
 #formModal{
@@ -96,4 +102,10 @@ label{
     display:inline-block;
     text-align:center;
     border-radius: 10%;
+}
+
+/*back to top*/
+.backToTop{
+    border:none;
+    background-color:#f66828;
 }

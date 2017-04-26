@@ -1,10 +1,11 @@
 $(document).ready(function(){
 
-// slideDown
+// slideDown movies
     $("#clickhere").click(function(event) {
     $("#shows").slideToggle('slow');
   });
 
+// seat hover functions
     var seat = $('.seat');
 
 $('.seat').on('mouseover',function(){
@@ -18,6 +19,7 @@ $('.seat').on('mouseleave',function(){
                       age:"",
                       email:"",
                       movie:""};
+                      
 //Make the seats click and bring down the form modal
     $('.seat').click(function(){
 
@@ -36,18 +38,18 @@ $('.seat').on('mouseleave',function(){
             var movieName=$('#movieName').val();
             var seat=$('.seat');
             reservations[0]={name:name, email:email, age:age, phone:phone,movie:movieName};
-           
+
             var reservationInfo = document.createElement('p');
             var thisSeat=document.getElementById;
-            reservationInfo.innerText ="Name: " + name; 
+            reservationInfo.innerText ="Name: " + name;
             thisSeat.appendChild(reservationInfo);
-        
-            
+
+
             $('#formModal').css('display','none');
-            
+
         });
-        
-        
+
+
 });
 
 
@@ -64,8 +66,3 @@ $('.seat').on('mouseleave',function(){
 
 
     });
-
-
-
-
-
