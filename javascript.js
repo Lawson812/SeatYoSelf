@@ -52,9 +52,8 @@ $('.seat.available').on('mouseleave',function(){
         $('.seat.available').click(function() {
           var seatNum= $(this).text();
         })
-       // I think this is a good starting point
 
-
+       // seat reservation info
         $('.reserveButton').on('click',function(){
             var nameInp = $('#name').val();
             var emailInp = $('#email').val();
@@ -80,8 +79,8 @@ $('.seat.available').on('mouseleave',function(){
     $('.backToTop').click(function(){
         $('html, body').animate({
     scrollTop: ($('.header').offset().top)
-},500);
-    });
+    },500);
+  });
 
 
 
