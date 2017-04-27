@@ -4,6 +4,10 @@ $(document).ready(function(){
     $("#clickhere").click(function(event) {
     $("#shows").slideToggle('slow');
   });
+
+  $("#clickme").click(function(event) {
+  $("#movie").slideToggle('slow');
+});
 //change opacity of seats on hover
 //mouseover function
 $('.available').on('mouseover',function(){
