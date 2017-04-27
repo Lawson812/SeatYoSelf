@@ -49,7 +49,6 @@ $('.seat.available').on('mouseleave',function(){
 // reservation button
 
        // I think this is a good starting point
-        var reservations=[];
 
         $('.reserveButton').on('click',function(){
             var nameInp = $('#name').val();
@@ -58,9 +57,19 @@ $('.seat.available').on('mouseleave',function(){
             var phoneInp =$('#phone').val();
             var movieNameInp =$('#movieName').val();
             var seatInp =$('.seat');
-            reservations.push({name:nameInp, email:emailInp, age:ageInp, phone:phoneInp,movie:movieNameInp});
-             console.log(nameInp, seatInp);
-           });
+            seatUnavailable = {
+                nameInp:name,
+                emailInp:email,
+                phoneInp:phone,
+                movieNameInp:movieName,
+                seat:seat
+            };
+
+
+           reservations.push();
+           changeClass();
+
+         });
 
 
         $('.reserveButton').on('click',function (){
