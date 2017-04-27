@@ -5,15 +5,7 @@ $(document).ready(function(){
     $("#shows").slideToggle('slow');
   });
 //change opacity of seats on hover
-
-$('.seat.available').on('mouseover',function(){
-// slideDown movies
-    $("#clickhere").click(function(event) {
-    $("#shows").slideToggle('slow');
-  });
-
-// seat hover functions
-
+//mouseover function
 $('.seat').on('mouseover',function(){
     $(this).css('opacity', '0.7');
 });
@@ -28,24 +20,22 @@ $('.seat.available').on('mouseleave',function(){
                       movie:""};
 
 //Make the seats click and bring down the form modal
-    $('.seat').click(function(){
-
-
 
     var reservations=[];
     var takenSeats =[];
 
-//seats click events
-    $('.seat.available').click(function(){
-  var seatNum = $(this).text();
+// seats click events
+$('.available').on('click', function(e){
+  var seatNum = e.target.innerText;
+  console.log(seatNum);
 
-        //var seat=$(this).id();
+        var seat=$(this).text();
      $('#formModal').css('display','block');
      $('#infoForm').slideDown(500);
        $('.close').on('click',function(){
            $('#formModal').css('display','none');
        });
-       // I think this is a good starting point
+
         $('.reserveButton').on('click',function(){
             var nameInp = $('#name').val();
             var emailInp = $('#email').val();
@@ -54,25 +44,23 @@ $('.seat.available').on('mouseleave',function(){
             var movieNameInp =$('#movieName').val();
             var seatInp =$('.seat');
             reservations.push({name:nameInp, email:emailInp, age:ageInp, phone:phoneInp,movie:movieNameInp, seat: seatNum});
-            console.log(reservations);
+              $('.seat.available').each(function(x,num){
+                reservations.forEach(function(thisSeat){
+                  if(num.innerText===thisSeat.seat){
+                    $(num).addClass('taken').removeClass('available');
+                  }
+                  $('#formModal').css('display','none');
+                });
+              })
            });
+      });
 
-
-
-});
-
-
-});
 
 //back to top button
     var infoArray=[];
     $('.backToTop').click(function(){
         $('html, body').animate({
     scrollTop: ($('.header').offset().top)
-},500);
+    },500);
     });
-
-
-
-});
 });
