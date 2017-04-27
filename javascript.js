@@ -32,20 +32,20 @@ $('.seat.available').on('mouseleave',function(){
 
 
 
-    var availableSeats =[];
+    var reservations=[];
     var takenSeats =[];
 
 //seats click events
     $('.seat.available').click(function(){
+  var seatNum = $(this).text();
 
-        var seat=$(this).id();
+        //var seat=$(this).id();
      $('#formModal').css('display','block');
      $('#infoForm').slideDown(500);
        $('.close').on('click',function(){
            $('#formModal').css('display','none');
        });
        // I think this is a good starting point
-        var reservations=[];
         $('.reserveButton').on('click',function(){
             var nameInp = $('#name').val();
             var emailInp = $('#email').val();
@@ -53,38 +53,10 @@ $('.seat.available').on('mouseleave',function(){
             var phoneInp =$('#phone').val();
             var movieNameInp =$('#movieName').val();
             var seatInp =$('.seat');
-            reservations.push({name:nameInp, email:emailInp, age:ageInp, phone:phoneInp,movie:movieNameInp});
-             console.log(nameInp, seatInp);
+            reservations.push({name:nameInp, email:emailInp, age:ageInp, phone:phoneInp,movie:movieNameInp, seat: seatNum});
+            console.log(reservations);
            });
 
-
-        $('.reserveButton').on('click',function (){
-            var name = $('#name').val();
-            var email = $('#email').val();
-            var age= $('#age').val();
-            var phone=$('#phone').val();
-
-            var movieName=$('#movieName').val();
-
-            seat.setAttribute('class', 'seat taken')
-
-            $('#formModal').css('display','none');
-        });
-
-            var movieName=$('#movieName').val();
-            var seat=$('.seat');
-            reservations[0]={name:name, email:email, age:age, phone:phone,movie:movieName};
-
-            var reservationInfo = document.createElement('p');
-            var thisSeat=document.getElementById;
-            reservationInfo.innerText ="Name: " + name;
-            thisSeat.appendChild(reservationInfo);
-
-
-            $('#formModal').css('display','none');
-
-
-        });
 
 
 });
@@ -102,4 +74,5 @@ $('.seat.available').on('mouseleave',function(){
 
 
 
+});
 });
