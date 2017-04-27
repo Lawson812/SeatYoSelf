@@ -32,23 +32,28 @@ $('.seat.available').on('mouseleave',function(){
 
 
 
-    var availableSeats =[];
+    var reservations=[];
     var takenSeats =[];
 
 //seats click events
     $('.seat.available').click(function(){
+  var seatNum = $(this).text();
 
-        var seat=$(this).id();
+        //var seat=$(this).id();
      $('#formModal').css('display','block');
      $('#infoForm').slideDown(500);
        $('.close').on('click',function(){
            $('#formModal').css('display','none');
        });
 
-        var reservations={};
+        var reservations=[];
+        var seatTaken=[];
 // reservation button
-
+        $('.seat.available').click(function() {
+          var seatNum= $(this).text();
+        })
        // I think this is a good starting point
+
 
         $('.reserveButton').on('click',function(){
             var nameInp = $('#name').val();
@@ -57,19 +62,10 @@ $('.seat.available').on('mouseleave',function(){
             var phoneInp =$('#phone').val();
             var movieNameInp =$('#movieName').val();
             var seatInp =$('.seat');
-            seatUnavailable = {
-                nameInp:name,
-                emailInp:email,
-                phoneInp:phone,
-                movieNameInp:movieName,
-                seat:seat
-            };
 
-
-           reservations.push();
-           changeClass();
-
-         });
+            reservations.push({name:nameInp, email:emailInp, age:ageInp, phone:phoneInp,movie:movieNameInp, seat: seatNum});
+            console.log(reservations);
+           });
 
 
 
@@ -89,4 +85,5 @@ $('.seat.available').on('mouseleave',function(){
 
 
 
+});
 });
