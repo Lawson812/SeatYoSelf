@@ -20,50 +20,38 @@ $('.seat.available').on('mouseleave',function(){
     var reservations=[];
     var takenSeats =[];
 
-
 // seats click events
 $('.available').on('click', function(e){
   var seatNum = e.target.innerText;
-var thisthing= e.target;
   console.log(seatNum);
+
+        var seat=$(this).text();
      $('#formModal').css('display','block');
      $('#infoForm').slideDown(500);
        $('.close').on('click',function(){
            $('#formModal').css('display','none');
        });
 
-       var person ={name:"",
-       email: "",
-       age:"",
-       phone:"",
-       movie:"",
-       seat:""};
         $('.reserveButton').on('click',function(){
-
-          person.name=$('#name').val();
-          person.email=$('#email').val();
-          person.age=$('#age').val()
-          person.phone=$('#phone').val();
-          person.movie=$('#movieName');
-          person.seat=seatNum;
-          reservations.unshift(person);
-          console.log(thisthing);
-
-        console.log(reservations)
+            var nameInp = $('#name').val();
+            var emailInp = $('#email').val();
+            var ageInp = $('#age').val();
+            var phoneInp =$('#phone').val();
+            var movieNameInp =$('#movieName').val();
+            var seatInp =$('.seat');
+            reservations.push({name:nameInp, email:emailInp, age:ageInp, phone:phoneInp,movie:movieNameInp, seat: seatNum});
               $('.seat.available').each(function(x,num){
                 reservations.forEach(function(thisSeat){
-
                   if(num.innerText===thisSeat.seat){
-                    $(num).removeClass('available').addClass('taken').off('click');
-                     thisthing.append(reservations[0].name);
+                    $(num).addClass('taken').removeClass('available');
+                    for(i=0, i <=reservations.length, i++) {
+                      var formName = Math.max(i);
+                      console.log(formName);
 
+                    }
                     $('.taken').on('mouseenter', function(){
-                      $('.resName').css('display', 'inline');
+                      $('#reservedBy').css('display', 'block');
                     });
-                    $('.taken').on('mouseout', function(){
-                      $('.resName').css('display','none');
-                    });
-
                   }
                   $('#formModal').css('display','none');
                 });

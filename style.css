@@ -64,7 +64,17 @@ input {
     box-shadow: 3px 3px 9px     #797777;
 
 }
-
+.resName {
+  display:none;
+}
+#reservedBy {
+  background-color: red;
+  height: 20vh;
+  width: 15vh;
+  display: none;
+  position:relative;
+  z-index: 100;
+}
 #formModal{
     display: none;
     position: fixed;
