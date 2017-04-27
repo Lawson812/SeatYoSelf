@@ -7,11 +7,28 @@ $(document).ready(function(){
 //change opacity of seats on hover
     
 $('.seat.available').on('mouseover',function(){
+// slideDown movies
+    $("#clickhere").click(function(event) {
+    $("#shows").slideToggle('slow');
+  });
+
+// seat hover functions
+
+$('.seat').on('mouseover',function(){
     $(this).css('opacity', '0.7');
 });
 $('.seat.available').on('mouseleave',function(){
     $(this).css('opacity','1');
 });
+
+    var formObjects ={name:"",
+                      phone:"",
+                      age:"",
+                      email:"",
+                      movie:""};
+                      
+//Make the seats click and bring down the form modal
+    $('.seat').click(function(){
 
 
     
@@ -34,12 +51,31 @@ $('.seat.available').on('mouseleave',function(){
             var email = $('#email').val();
             var age= $('#age').val();
             var phone=$('#phone').val();
+<<<<<<< HEAD
             var movieName=$('#movieName').val();                       
 
             seat.setAttribute('class', 'seat taken')
             
             $('#formModal').css('display','none');
         });
+=======
+            var movieName=$('#movieName').val();
+            var seat=$('.seat');
+            reservations[0]={name:name, email:email, age:age, phone:phone,movie:movieName};
+
+            var reservationInfo = document.createElement('p');
+            var thisSeat=document.getElementById;
+            reservationInfo.innerText ="Name: " + name;
+            thisSeat.appendChild(reservationInfo);
+
+
+            $('#formModal').css('display','none');
+
+        });
+
+
+});
+
 
 });
 
@@ -52,3 +88,5 @@ $('.seat.available').on('mouseleave',function(){
     });
 
 });
+
+
