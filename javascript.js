@@ -72,33 +72,6 @@ $('.seat.available').on('mouseleave',function(){
          });
 
 
-        $('.reserveButton').on('click',function (){
-            var name = $('#name').val();
-            var email = $('#email').val();
-            var age= $('#age').val();
-            var phone=$('#phone').val();
-
-            var movieName=$('#movieName').val();
-
-            seat.setAttribute('class', 'seat taken')
-
-            $('#formModal').css('display','none');
-        });
-
-            var movieName=$('#movieName').val();
-            var seat=$('.seat');
-            reservations[0]={name:name, email:email, age:age, phone:phone,movie:movieName};
-
-            var reservationInfo = document.createElement('p');
-            var thisSeat=document.getElementById;
-            reservationInfo.innerText ="Name: " + name;
-            thisSeat.appendChild(reservationInfo);
-
-
-            $('#formModal').css('display','none');
-
-
-        });
 
 
 });
