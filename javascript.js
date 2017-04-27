@@ -19,7 +19,7 @@ $('.seat').on('mouseleave',function(){
                       age:"",
                       email:"",
                       movie:""};
-                      
+
 //Make the seats click and bring down the form modal
     $('.seat').click(function(){
 
@@ -29,7 +29,7 @@ $('.seat').on('mouseleave',function(){
            $('#formModal').css('display','none');
        });
         var reservations={};
-
+// reservation button
         $('.reserveButton').on('click',function(){
             var name = $('#name').val();
             var email = $('#email').val();
