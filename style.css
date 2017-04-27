@@ -27,7 +27,7 @@ input {
     bottom: 0%;
 }
 
-.seat{
+.seat.available{
     width:12vw;
     height:15vh;
     background-color:#f46a29;
@@ -87,13 +87,7 @@ input {
 label{
     text-align: center;
 }
-
-.reservedSeat{
-     width:12vw;
-    height:15vh;
+.seat.taken{
     background-color:aqua;
-    margin-top:5%;
-    display:inline-block;
-    text-align:center;
-    border-radius: 10%;
 }
+
