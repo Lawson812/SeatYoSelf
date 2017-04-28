@@ -54,7 +54,7 @@ input {
   background-color:#FF6633;
   border-color:#2A3238;
 }
-/*form style*/
+/*styling for modal*/
 #infoForm{
     background-color: #fefefe;
     margin: 15% auto;
@@ -100,7 +100,7 @@ input {
 label{
     text-align: center;
 }
-/*taken seat colors*/
+
 .taken{
     color:#FFFFFF;
     background-color:#2A3238;

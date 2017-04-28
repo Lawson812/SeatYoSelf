@@ -1,10 +1,13 @@
 $(document).ready(function(){
 
-    //movie listing dropdown
+//movie listing dropdown
     $("#clickhere").click(function(event) {
     $("#shows").slideToggle('slow');
   });
-
+//movie poster dropdown
+  $("#clickme").click(function(event) {
+  $("#movie").slideToggle('slow');
+});
 //change opacity of seats on hover
 //mouseover function
 $('.available').on('mouseover',function(){
@@ -13,45 +16,49 @@ $('.available').on('mouseover',function(){
 $('.seat.available').on('mouseleave',function(){
     $(this).css('opacity','1');
 });
-//declare empty array to place reservation objects 
-        var reservations=[];    
-//Make the seats click and bring down the form modal
+
+    var reservations=[];
+    
+//click events Make the seats click and bring down the form modal
 
 $('.available').on('click', function(e){
+
+    //seatNum is the inner text of the seat that was clicked
   var seatNum = e.target.innerText;
-  var thisthing= e.target;
-  console.log(seatNum);
+//mySeat declares a variable to use to append the reservations names to the selected seat
+  var mySeat= e.target;
+//changes display of modal and makes form slide down
      $('#formModal').css('display','block');
      $('#infoForm').slideDown(500);
        $('.close').on('click',function(){
            $('#formModal').css('display','none');
        });
-//declared empty object 'person' to place form values inside of, to be later cataloged in the 'reservations' array
+//empty object called person to store form values
        var person ={name:"",
        email: "",
        age:"",
        phone:"",
        movie:"",
        seat:""};
-    //onclick events for reserve button in form modal
         $('.reserveButton').on('click',function(){
-//onclick, inputs out the values of 'person' object with form data
+///takes form values places them inside of empty object 'person'
           person.name=$('#name').val();
           person.email=$('#email').val();
           person.age=$('#age').val()
           person.phone=$('#phone').val();
           person.movie=$('#movieName');
           person.seat=seatNum;
-//unshift places new person object into reservations array at [0]/
+            
+//unshifts new object 'person' into 'reservations[0]'
           reservations.unshift(person);
-//each jQuery loop that iterates through all elements with classes both 'seat' and 'available', then iterates through the reservations array using a forEach loop and finds the inner text of the items with seat and available classes, and compares them with the seat objects in the reservation array and if they match, removes the available class, adds the taken class, and removes the click event. then appends the name value at reservations[0] to the targeted div. also changes display of modal to none 
+//loops through available seats, and the  newly created objects in the reservations array and matches the innertext of the available seat with the seat name in the object and if they match, it changes the class of that specific seat and turns off event handler  
               $('.seat.available').each(function(x,num){
                 reservations.forEach(function(thisSeat){
 
                   if(num.innerText===thisSeat.seat){
                     $(num).removeClass('available').addClass('taken').off('click');
-                     thisthing.append(reservations[0].name);
-                     }
+                     mySeat.append(reservations[0].name);
+                  }
                   $('#formModal').css('display','none');
                 });
               })
@@ -71,4 +78,5 @@ $('.available').on('click', function(e){
     scrollTop: ($('.header').offset().top)
     },500);
     });
-});
+    
+});//doc.ready
