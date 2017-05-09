@@ -108,7 +108,7 @@ label{
 }
 /*back to top*/
 .backToTop{
-    border:none;
+    border:double;
     background-color:#2A3238;
     color: #FFFFFF;
     border: double;
