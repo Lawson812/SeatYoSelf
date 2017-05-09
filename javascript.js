@@ -18,7 +18,7 @@ $('.seat.available').on('mouseleave',function(){
 });
 
     var reservations=[];
-    
+
 //click events Make the seats click and bring down the form modal
 
 $('.available').on('click', function(e){
@@ -48,10 +48,12 @@ $('.available').on('click', function(e){
           person.phone=$('#phone').val();
           person.movie=$('#movieName');
           person.seat=seatNum;
-            
+
 //unshifts new object 'person' into 'reservations[0]'
           reservations.unshift(person);
-//loops through available seats, and the  newly created objects in the reservations array and matches the innertext of the available seat with the seat name in the object and if they match, it changes the class of that specific seat and turns off event handler  
+//loops through available seats, and the  newly created objects in the reservations array and
+// matches the innertext of the available seat with the seat name in the object and if they match,
+// it changes the class of that specific seat and turns off event handler
               $('.seat.available').each(function(x,num){
                 reservations.forEach(function(thisSeat){
 
@@ -78,5 +80,5 @@ $('.available').on('click', function(e){
     scrollTop: ($('.header').offset().top)
     },500);
     });
-    
+
 });//doc.ready
